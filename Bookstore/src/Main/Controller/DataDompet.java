@@ -1,0 +1,36 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Main.Controller;
+import javax.swing.*;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class DataDompet {
+    private static int saldo, voucher,vocher2;
+    private static String idDompet;
+    
+    public static void setIdDompet(String vIdDompet){
+        idDompet = vIdDompet;
+    }
+    public static String getIdDompet(){
+        return idDompet;
+    }
+    public static void setSaldo(int vsaldo){
+        saldo = vsaldo;
+    }
+    public static void kurangSaldo(int vsaldo){
+        saldo -= vsaldo;
+    }
+    public static int getSaldo(){
+        return saldo;
+    }
+    public static void setVoucher(int vVoucher){voucher = vVoucher; tambahSaldo(voucher);}
+    public static void tambahSaldo(int vvoucher){vocher2 = saldo + voucher; setSaldo(vocher2);}
+    public static int getVocher2(){return vocher2;}
+    public static int getVoucher(){return voucher;}
+
+}
